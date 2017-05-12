@@ -163,8 +163,10 @@ footer.footer {
     .web-section .about-us .section-description p {
       text-align: justify !important;
       text-indent: 2.4rem; }
-  .web-section .event-detail .event-title:after {
-    width: 30% !important; }
+  .web-section .event-detail .event-title {
+    text-align: center; }
+    .web-section .event-detail .event-title:after {
+      width: 30% !important; }
   .web-section .event-detail .event-content .content-box {
     flex-direction: column; }
     .web-section .event-detail .event-content .content-box .box {
