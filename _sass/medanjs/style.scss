@@ -89,7 +89,6 @@ body {
 				font-family: openSans;
 
 				.about-us {
-						height: 50vh;
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
@@ -132,7 +131,6 @@ body {
 						}
 						.event-title {
 								font-size: 2.8rem;
-								text-align: center;
 								font-weight: bold;
 								position: relative;
 								font-family: raleway-bold;
@@ -207,10 +205,110 @@ footer.footer {
 }
 
 @include small {
+    .navbar {
+        display: none !important;
+    }
+
+    .website-container {
+    }
+
+    .website-header {
+        .second-text {
+            text-align: center;
+            font-size: 2.4rem !important;
+        }
+    }
+
+    .web-section {
+        .about-us {
+            height: initial !important;
+            padding: 2rem 0;
+
+            .section-description {
+                p {
+                    text-align: justify !important;
+                    text-indent: 2.4rem;
+                }
+            }
+        }
+        .event-detail {
+
+            .event-title {
+                &:after {
+                    width: 30% !important;
+                }
+            }
+
+            .event-content {
+                .content-box {
+                    flex-direction: column;
+                    .box {
+                        width: 100%;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include tablet {
+    body {
+    }
+
+    .web-section {
+        .about-us {
+            height: initial !important;
+            padding: 2rem 0;
+
+            .section-description {
+                p {
+                    text-align: center !important;
+                    text-indent: 0rem;
+                }
+            }
+        }
+        .event-detail {
+
+            .event-title {
+                text-align: center;
+                &:after {
+                    width: 30% !important;
+                }
+            }
+
+            .event-content {
+                .content-box {
+                    flex-direction: row;
+                    .box {
+                        width: 50%;
+                        padding-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include desktop {
+    .navbar {
+        display: block !important;
+    }
+
+    .web-section {
+        .about-us {
+            height: 50vh !important;
+        }
+
+        .event-detail {
+
+            .event-content {
+                .content-box {
+                    .box {
+                        width: calc(100% / 3);
+                    }
+                }
+            }
+        }
+    }
 }
