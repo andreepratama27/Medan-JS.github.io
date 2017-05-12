@@ -1,0 +1,207 @@
+@import "./config";
+@import "./colors";
+
+html,
+body {
+		margin: 0;
+		padding: 0;
+		min-height: 100%;
+}
+
+body {
+}
+
+.navbar.navbar-default {
+		&.affix {
+				background-color: $color-almost-dark;
+				transition: .3s ease all;
+
+				.navbar-nav {
+						li a {
+								color: $color-grey;
+						}
+				}
+		}
+		background-color: transparent;
+		border: 0 !important;
+		height: 6rem !important;
+		display: flex;
+		align-items: center;
+		.navbar-header {
+				.navbar-brand {
+						display: flex;
+						align-items: center;
+						color: #fafafa;
+						width: 100%;
+
+						.image-brand {
+								width: 5.5rem;
+								img {
+										box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+										width: 100%;
+										height: 100%;
+								}
+						}
+				}
+		}
+		.navbar-nav {
+				li a {
+						color: #333;
+						font-family: openSans;
+
+						&:hover {
+								color: #fafafa;
+						}
+				}
+		}
+}
+
+.website-container {
+		.website-header {
+				height: 100vh;
+				background-color: $color-brand;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+		}
+
+		canvas.particles-js-canvas-el {
+				position: absolute;
+		}
+
+		.welcome-bigger-text {
+				z-index: 1;
+				position: relative;
+				.first-text {
+						font-size: 6rem;
+						font-weight: bold;
+						font-family: raleway;
+						text-align: center;
+				}
+				.second-text {
+						font-family: openSans;
+						font-size: 2.4rem;
+				}
+		}
+
+		.web-section {
+				font-family: openSans;
+
+				.about-us {
+						height: 50vh;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+
+						.about-container {
+								width: 70%;
+								margin: 0 auto;
+						}
+						.section-title {
+								font-family: raleway-bold;
+								font-size: 2.8rem;
+								text-align: center;
+								font-weight: bold;
+						}
+						.section-description {
+								padding-top: 2rem;
+								p {
+										text-align: center;
+										font-size: 16px;
+										line-height: 2.8rem;
+								}
+								.brand {
+										font-weight: 600;
+								}
+						}
+				}
+
+				.event-detail {
+						background-color: $color-almost-grey;
+						min-height: 50vh;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: flex-start;
+
+						.event-container {
+								width: 70%;
+								margin: 4rem auto;
+						}
+						.event-title {
+								font-size: 2.8rem;
+								text-align: center;
+								font-weight: bold;
+								position: relative;
+								font-family: raleway-bold;
+
+								&:after {
+										content: '';
+										display: block;
+										width: 10%;
+										height: .4rem;
+										margin: 1rem auto 2.4rem auto;
+										background-color: $color-brand;
+								}
+						}
+						.event-content {}
+						.content-box {
+								display: flex;
+								flex-wrap: wrap;
+								.box {
+										width: calc(100% / 3);
+										padding-left: 2rem;
+										margin-bottom: 2rem;
+										.box-image {
+												img {
+														width: 100%;
+												}
+										}
+										.box-description {
+												background-color: $color-light;
+												text-align: center;
+												padding: 2rem 0;
+												font-size: 1.6rem;
+												font-family: openSans-bold;
+										}
+								}
+						}
+						.content-more {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								.btn-default {
+										background-color: $color-button-readmore;
+										border: 0;
+										padding: 1.6rem 2rem;
+										color: $color-light;
+										font-family: openSans;
+										border-bottom: 4px solid darken($color-brand, 30%);
+
+										&:hover {
+												background-color: darken($color-brand, 15%);
+												transition: .3s ease all;
+										}
+
+										&:focus {
+												outline: none;
+										}
+								}
+						}
+				}
+		}
+}
+
+footer.footer {
+		font-family: openSans;
+		background-color: $color-almost-dark;
+		height: 6rem;
+		color: #757575;
+		display: flex;
+		align-items: center;
+
+		span.brand {
+		}
+}
